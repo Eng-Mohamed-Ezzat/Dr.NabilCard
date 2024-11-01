@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nabil Shalaby's Contacts</title>
+    <title>Dr. Nabil Shalaby's Contacts</title>
+    
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -13,60 +17,123 @@
             height: 100vh;
             margin: 0;
             background-color: #f4f4f9;
+            overflow: hidden;
         }
         .card {
-            width: 300px;
+            width: 320px;
             padding: 20px;
-            border-radius: 8px;
+            border-radius: 10px;
             background-color: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.5s ease;
+        }
+        .card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .profile-photo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: block;
+            border: 3px solid #1a73e8;
+            background-size: cover;
+            background-position: center;
         }
         .card h2 {
-            font-size: 20px;
-            margin-bottom: 10px;
+            font-size: 22px;
+            margin: 0;
             color: #333;
+            text-align: center;
         }
         .card p {
-            margin: 8px 0;
+            margin: 10px 0;
             font-size: 14px;
             color: #666;
+            text-align: center;
         }
         .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 8px;
+            margin: 10px 0;
         }
         .contact-item span {
             font-weight: bold;
-            width: 70px;
+            margin-left: 10px;
+        }
+        .contact-item i {
+            color: #1a73e8;
+            min-width: 20px;
         }
         .social-links a {
             color: #1a73e8;
             text-decoration: none;
-            display: block;
+            display: flex;
+            align-items: center;
             margin: 5px 0;
+            text-align: center;
+        }
+        .social-links a i {
+            margin-right: 8px;
         }
         .social-links a:hover {
             text-decoration: underline;
+        }
+        .download-button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            margin-top: 15px;
+            background-color: #1a73e8;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .download-button:hover {
+            background-color: #1558b0;
         }
     </style>
 </head>
 <body>
 
-<div class="card">
-    <h2>Nabil’s Contacts</h2>
-    <div class="contact-item"><span>Mobile:</span> <a href="tel:+201063088756">+201063088756</a></div>
-    <div class="contact-item"><span>Tel:</span> <a href="tel:+20502503020">+20502503020</a></div>
-    <div class="contact-item"><span>Email:</span> <a href="mailto:nabil@arenho.com">nabil@arenho.com</a></div>
-    <div class="contact-item"><span>Website:</span> <a href="https://arenho.com" target="_blank">arenho.com</a></div>
-    <p>Nabil Shalaby, Ph.D.<br>Founder & Chairman<br>Arab Entrepreneur House (Arenho)</p>
+<div class="card" id="contactCard">
+    <div class="profile-photo" style="background-image: url('drnabil.jpeg');"></div>
+    <h2>Dr. Nabil’s Contact Page</h2>
+    <p>Founder & Chairman</p>
+    <p>Arab Entrepreneur House (Arenho)</p>
+    
+    <div class="contact-item"><i class="fas fa-mobile-alt"></i><span>Mobile:</span> <a href="tel:+201063088756">+201063088756</a></div>
+    <div class="contact-item"><i class="fas fa-phone-alt"></i><span>Tel:</span> <a href="tel:+20502503020">+20502503020</a></div>
+    <div class="contact-item"><i class="fas fa-envelope"></i><span>Email:</span> <a href="mailto:nabil@arenho.com">nabil@arenho.com</a></div>
+    <div class="contact-item"><i class="fas fa-globe"></i><span>Website:</span> <a href="https://arenho.com" target="_blank">arenho.com</a></div>
+    
     <div class="social-links">
-        <a href="https://www.linkedin.com/in/nabilshalaby" target="_blank">LinkedIn Profile</a>
-        <a href="https://www.facebook.com/nabil.shalaby" target="_blank">Facebook Profile</a>
-        <a href="https://x.com/NabilShalaby" target="_blank">X (Twitter) Profile</a>
-        <a href="https://www.rowadalaamal.com/author/nabeel-shalaby" target="_blank">Read Articles</a>
+        <a href="https://www.linkedin.com/in/nabilshalaby" target="_blank"><i class="fab fa-linkedin"></i>LinkedIn Profile</a>
+        <a href="https://www.facebook.com/nabil.shalaby" target="_blank"><i class="fab fa-facebook"></i>Facebook Profile</a>
+        <a href="https://x.com/NabilShalaby" target="_blank"><i class="fab fa-twitter"></i>X (Twitter) Profile</a>
+        <a href="https://www.rowadalaamal.com/author/nabeel-shalaby" target="_blank"><i class="fas fa-newspaper"></i>Read Articles</a>
     </div>
+    
+    <a href="nabil_shalaby.vcf" download="nabil_shalaby.vcf" class="download-button">
+        <i class="fas fa-address-card"></i> Add to Contacts
+    </a>
 </div>
+
+<script>
+    window.onload = function() {
+        const card = document.getElementById('contactCard');
+        setTimeout(() => {
+            card.classList.add('visible');
+        }, 200); 
+    };
+</script>
 
 </body>
 </html>
