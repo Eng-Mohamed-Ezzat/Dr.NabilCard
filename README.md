@@ -34,7 +34,7 @@ A simple HTML project featuring Dr. Nabil Shalaby's contact information, formatt
 [Live Demo on GitHub Pages](https://Eng-Mohamed-Ezzat.github.io/Dr.NabilCard/)
 
 ## Screenshots
-[Screenshot of Dr. Nabil Shalaby's Contact Card](/Screenshot 2024-11-01 225254.png)
+![Screenshot of Dr. Nabil Shalaby's Contact Card](Screenshot%202024-11-01%20225254.png)
 
 ## License
 This project is open-source and available under the [MIT License](LICENSE).
