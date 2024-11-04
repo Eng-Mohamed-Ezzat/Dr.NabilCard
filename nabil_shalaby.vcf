@@ -1,12 +1,9 @@
 BEGIN:VCARD
 VERSION:3.0
-FN:Nabil Shalaby
-ORG:Arab Entrepreneur House (Arenho)
+FN:Dr. Nabil Shalaby
 TITLE:Founder & Chairman
 TEL;TYPE=CELL:+201063088756
 TEL;TYPE=WORK:+20502503020
 EMAIL;TYPE=INTERNET:nabil@arenho.com
 URL:https://arenho.com
-ADR;TYPE=WORK:;;123 Main St;City;Region;Postal Code;Country
-NOTE:Find me on LinkedIn, Facebook, X, and more.
 END:VCARD
